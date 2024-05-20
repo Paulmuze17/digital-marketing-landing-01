@@ -1,5 +1,10 @@
 html {
   box-sizing: border-box;
+  font-family: var(--font-family);
+  font-optical-sizing: none;
+//   line-height: 200%;
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -15,6 +20,14 @@ html {
   box-sizing: inherit;
 }
 
+section {
+	margin-bottom: 120px;
+}
+
+svg {
+	display: block;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -23,7 +36,11 @@ img {
 
 a {
   text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--text-color);
 }
+
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
@@ -152,4 +169,32 @@ a {
 }
 .t--normal {
 	font-weight: normal;
+}
+
+.text-white {
+	color: var(--color-light);
+}
+.text-dark {
+	color: var(--color-text-dark);
+}
+.text-grey {
+	color: var(--color-text-grey);
+}
+.text-title {
+	color: var(--color-text-title);
+}
+.text-red {
+	color: var(--color-text-red);
+}
+
+.bg-gradient {
+	background: var(--bg-gradient);
+}
+.bg-gradient-peach {
+	background: var(--bg-gradient-peach);
+}
+
+
+.text-center {
+	text-align: center;
 }

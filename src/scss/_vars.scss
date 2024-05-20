@@ -2,11 +2,35 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
+  --font-family: "Libre Franklin", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --color-light: #fff;
+
+  --color-text-dark: #333;
+  --color-text-grey: #808291;
+  --color-text-title: #0E1C61;
+  --color-text-red: #ff4d6d;
+
+  --color-btn-bg: #D9D9D9;
+
+  --box-shadow-btn: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  --box-shadow-card: 0px 4px 10px 0px rgb(0 0 0 / 5%);
+  --box-shadow-box: 0px 4px 10px 0px rgb(0 0 0 / 10%);
+  --box-shadow-box2: 0px 4px 4px 0px rgb(0 0 0 / 15%);
+  --bg-blue: rgb(249, 243, 255);
+  --bg-red: rgb(254, 247, 252);
+  --bg-yellow: rgb(255, 255, 246);
+  --bg-purple: rgb(246, 255, 255);
+  --color-light-grey: #EEEEEE;
+  --bg-grey: #D9D9D9;
+
+  // gradient colors
+  --bg-gradient: linear-gradient(to right, #ff512f, #dd2476);
+  --bg-gradient-indigo: linear-gradient(to right, #8e2de2, #4a00e0);
+  --bg-gradient-peach: linear-gradient(to right, #fff7f3, #fff7f3);
+  --bg-gradient-yellow: linear-gradient(to right, #FEECE3, #F9F5DF);
 }

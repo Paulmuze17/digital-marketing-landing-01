@@ -1,0 +1,33 @@
+.section-banner-area__left h1 {
+	font-size: 48px;
+	font-weight: 600;
+}
+.section-banner-area__left h1 span{
+	font-size: 48px;
+	font-weight: 600;
+	color: inherit;
+}
+.section-banner-area__left {
+	max-width: 426px;
+}
+.section-banner-area__container {
+	display: flex;
+	justify-content: space-between;
+}
+.section-banner-area__right img {
+	max-height: 412px;
+}
+.section-banner-area__digital-box {
+	margin-bottom: 32px;
+}
+.section-banner-area__h1-container {
+	margin-bottom: 16px;
+}
+.section-banner-area__text-container {
+	margin-bottom: 24px;
+}
+.section-banner-area__text-container p {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 120%;
+}

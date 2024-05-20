@@ -3,6 +3,10 @@ import gulpSass from "gulp-sass";
 import cleanCss from "gulp-clean-css"; //сжатие css
 // import webpCss from "gulp-webpcss"; // conv. webp images (requires 'npm i -D webp-converter@2.2.3')
 import autoprefixer from "gulp-autoprefixer"; // crossbrowser vendar prefixers - добавление вендорных префиксов
+import postcss from "gulp-postcss"; //For Compiling tailwind utilities with tailwind config
+import tailwindcss from "tailwindcss"; // crossbrowser vendar prefixers - добавление вендорных префиксов
+import tailwindcssforms from "@tailwindcss/forms"; // crossbrowser vendar prefixers - добавление вендорных префиксов
+import tailwindcsstypography from "@tailwindcss/typography"; // crossbrowser vendar prefixers - добавление вендорных префиксов
 // import groupCssMediaQueries from "gulp-group-css-media-queries"; // grouping media queries
 
 // const mainSass = gulpSass(sass);
@@ -80,13 +84,20 @@ export const styles = () => {
 			)
 		)
 		.pipe(mainSass())
-		.pipe(
-			autoprefixer({
-				cascade: false,
-				grid: true,
-				overrideBrowserslist: ["last 5 versions"],
-			})
-		)
+		// .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer({
+		// 	cascade: false,
+		// 	grid: true,
+		// 	overrideBrowserslist: ["last 5 versions"],
+		// })]))
+		.pipe(postcss([
+			tailwindcss,
+			autoprefixer,
+			tailwindcssforms,
+			tailwindcsstypography
+		  ]))
+		// .pipe(
+		// 	autoprefixer()
+		// )
 		.pipe(
 			app.plugins.ifPlugin(
 				app.isProd,

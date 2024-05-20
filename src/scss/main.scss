@@ -1,16 +1,20 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // базовые подключения
 @import "vars";
 @import "mixins";
 @import "fonts";
-@import "settings";
+// @import "settings";
 
 // подключения компонентов страницы
-@import "./components/header";
+// @import "./components/header";
+@import "./components/ui";
+// @import "./components/section-banner-area";
+// @import "./components/section-agency-area";
 
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
+html {
+	// line-height: 51px;
 }

@@ -1,0 +1,34 @@
+.digital-box {
+	display: inline-block;
+	padding: 10px 25px;
+	min-width: 136px;
+	border-radius: 15px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 26px;
+	border-radius: 25px;
+	border: none;
+}
+.btn-ready {
+	display: inline-block;
+	padding: 15px 24px;
+	border-radius: 25px;
+	border: none;
+}
+.btn-wide {
+	display: inline-block;
+	padding: 12px 26px;
+	border-radius: 25px;
+	border: none;
+}
+
+.btn-round {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+}

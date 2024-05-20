@@ -34,6 +34,11 @@ global.app = {
 	browserSync: browserSync.create()
 };
 
+function previewReload(done) {
+	console.log("\n\t", "Reloading Browser Preview.\n");
+	browserSync.reload();
+	done();
+}
 
 const clean = (done) => {
     return del([app.path.buildFolder])
@@ -51,12 +56,15 @@ const watchFiles = () => {
 		baseDir: app.path.buildFolder
 	  },
 	});
-
+	gulp.watch(
+		["./tailwind.config.js", path.watch.scss],
+		gulp.series(styles, previewReload)
+	  );
     gulp.watch(path.watch.scss, styles);
     gulp.watch(path.watch.javascriptFiles, scripts);
     gulp.watch(path.watch.javascriptMain, scripts);
-    gulp.watch(path.watch.htmlParts, html);
-    gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.htmlParts, gulp.series(html, styles, previewReload));
+    gulp.watch(path.watch.html, gulp.series(html, styles, previewReload));
     gulp.watch(path.watch.resources, resources);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.images2, webpImages);
